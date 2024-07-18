@@ -1,0 +1,41 @@
+% Read an image
+I = imread('Current_Backward_sample_2_leveled.png');
+I = rgb2gray(I); % Convert to grayscale if it's a color image
+I = double(I); % Convert to double precision
+
+% Define the standard deviation for Gaussian kernel
+%sigma = 2;
+sigma = 1;
+
+% Create Gaussian derivative filters
+G = fspecial('gaussian', [6*sigma, 6*sigma], sigma);
+[Gx, Gy] = gradient(G);
+
+% Apply the filters to the image
+Ix = imfilter(I, Gx, 'conv', 'replicate');
+Iy = imfilter(I, Gy, 'conv', 'replicate');
+
+% Compute the gradient magnitude
+Gmag = sqrt(Ix.^2 + Iy.^2);
+
+% Define different threshold pairs for Canny edge detection
+thresholds = [0.01, 0.05; 0.02, 0.08; 0.04, 0.12; 0.06, 0.20];
+
+% Create a figure to display the results
+figure;
+subplot(2, 3, 1);
+imshow(I, []);
+title('Original Image');
+
+subplot(2, 3, 2);
+imshow(Gmag, []);
+title('Gradient Magnitude');
+
+% Apply and display Canny edge detection with different thresholds
+for i = 1:size(thresholds, 1)
+    thresh = thresholds(i, :);
+    BW = edge(Gmag, 'Canny', thresh);
+    subplot(2, 3, i + 2);
+    imshow(BW);
+    title(sprintf('Canny Thresh = [%.2f, %.2f]', thresh(1), thresh(2)));
+end
