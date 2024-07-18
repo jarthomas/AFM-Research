@@ -28,3 +28,13 @@ sigma = 1;
 
 `sigma = 1`: Sets the standard deviation for the Gaussian kernel.
 
+3. **Create Gaussian derivative filters**
+
+```matlab
+% Create Gaussian derivative filters
+G = fspecial('gaussian', [6*sigma, 6*sigma], sigma);
+[Gx, Gy] = gradient(G);
+```
+
+- `fspecial('gaussian', [6*sigma, 6*sigma], sigma)`: Creates a Gaussian filter.
+- `[Gx, Gy] = gradient(G)`: Computes the gradient of the Gaussian filter in the x and y directio
