@@ -58,3 +58,70 @@ The partial derivative of the Gaussian function with respect to \( y \) is:
 $$
 G_y(x, y) = rac{\partial G(x, y)}{\partial y} = -rac{y}{2\pi\sigma^4} e^{-rac{x^2 + y^2}{2\sigma^2}}
 $$
+
+4. **Apply the filters to the image and compute the gradient magnitude**
+
+```matlab
+% Apply the filters to the image
+Ix = imfilter(I, Gx, 'conv', 'replicate');
+Iy = imfilter(I, Gy, 'conv', 'replicate');
+
+% Compute the gradient magnitude
+Gmag = sqrt(Ix.^2 + Iy.^2);
+```
+
+- `imfilter(I, Gx, 'conv', 'replicate')`: Applies the Gaussian derivative filter in the x direction to the image.
+- `imfilter(I, Gy, 'conv', 'replicate')`: Applies the Gaussian derivative filter in the y direction to the image.
+- `sqrt(Ix.^2 + Iy.^2)`: Computes the gradient magnitude by combining the gradients in the x and y directions.
+
+### Gradient Magnitude Calculation
+
+The gradient magnitude is calculated using the following equation:
+
+$$
+G_{mag} = \sqrt{I_x^2 + I_y^2}
+$$
+
+where \( I_x \) and \( I_y \) are the gradients in the x and y directions, respectively.
+
+5. **Define different threshold pairs for Canny edge detection**
+
+```matlab
+% Define different threshold pairs for Canny edge detection
+thresholds = [0.01, 0.05; 0.02, 0.08; 0.04, 0.12; 0.06, 0.20];
+```
+
+- `thresholds = [0.01, 0.05; 0.02, 0.08; 0.04, 0.12; 0.06, 0.20]`: Defines different threshold pairs for Canny edge detection.
+
+### Canny Edge Detection
+
+The Canny edge detection algorithm uses two thresholds to detect strong and weak edges. The thresholds are defined as:
+
+$$
+	ext{Thresholds} = [T_{low}, T_{high}]
+$$
+
+where \( T_{low} \) and \( T_{high} \) are the lower and upper thresholds, respectively.
+
+6. **Display the results**
+
+```matlab
+% Display the results
+figure;
+subplot(2, 3, 1);
+imshow(I, []);
+title('Original Image');
+
+subplot(2, 3, 2);
+imshow(Gmag, []);
+title('Gradient Magnitude');
+
+% Apply and display Canny edge detection with different thresholds
+for i = 1:size(thresholds, 1)
+    thresh = thresholds(i, :);
+    BW = edge(Gmag, 'Canny', thresh);
+    subplot(2, 3, i + 2);
+    imshow(BW);
+    title(sprintf('Canny Thresh = [%.2f, %.2f]', thresh(1), thresh(2)));
+end
+```
