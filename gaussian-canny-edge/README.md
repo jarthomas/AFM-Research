@@ -37,4 +37,24 @@ G = fspecial('gaussian', [6*sigma, 6*sigma], sigma);
 ```
 
 - `fspecial('gaussian', [6*sigma, 6*sigma], sigma)`: Creates a Gaussian filter.
-- `[Gx, Gy] = gradient(G)`: Computes the gradient of the Gaussian filter in the x and y directio
+- `[Gx, Gy] = gradient(G)`: Computes the gradient of the Gaussian filter in the x and y directions.
+
+### Gradient of the Gaussian Filter
+
+The gradient of the Gaussian filter in the \( x \) and \( y \) directions can be computed using the partial derivatives of the Gaussian function.
+
+#### Gradient in the \( x \) Direction
+
+The partial derivative of the Gaussian function with respect to \( x \) is:
+
+$$
+G_x(x, y) = rac{\partial G(x, y)}{\partial x} = -rac{x}{2\pi\sigma^4} e^{-rac{x^2 + y^2}{2\sigma^2}}
+$$
+
+#### Gradient in the \( y \) Direction
+
+The partial derivative of the Gaussian function with respect to \( y \) is:
+
+$$
+G_y(x, y) = rac{\partial G(x, y)}{\partial y} = -rac{y}{2\pi\sigma^4} e^{-rac{x^2 + y^2}{2\sigma^2}}
+$$
