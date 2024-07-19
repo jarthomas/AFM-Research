@@ -2,7 +2,7 @@
 
 The following MATLAB script allows a user to generate an intensity profile by defining a line of interest. 
 
-# Summary
+### Summary
 
 1. **Input the TIFF**: The script starts by reading a TIFF image using the `imread` function.
 
