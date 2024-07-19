@@ -54,10 +54,6 @@ num_points = length(c);
 distance_um = (0:num_points-1) * um_per_pixel;
 ```
 
-$$
-\mathbf{d} = [0, 1, 2, \ldots, n-1] 	imes 	ext{um\_per\_pixel}
-$$
-
 8. **Plot Intensity Profile**: Finally, the intensity profile is plotted in nanoamperes against the distance in micrometers.
 
 ```matlab
