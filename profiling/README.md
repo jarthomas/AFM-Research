@@ -67,3 +67,6 @@ title('Intensity Profile');
 xlabel('Distance (\mum)');
 ylabel('Intensity (nA)');
 ```
+### Further Improvements
+I am working on improving the capabilites of the program by allowing a user to draw multiple lines of interest. I am having an issue changing the colors of the drawn lines... 
+![Same color](update-1-error-handling.png)
