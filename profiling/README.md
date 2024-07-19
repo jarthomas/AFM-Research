@@ -4,6 +4,7 @@ The following MATLAB script allows a user to generate an intensity profile by de
 
 ![Example Output](example-output-line.png)
 ![Gwydion Parity](gwid-parity.png)
+Parity verified in Gwydion
 
 ### Summary
 
