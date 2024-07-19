@@ -1,6 +1,8 @@
 ## Intesnity Generator from TIFF File Using MATLAB
 
-The following MATLAB script allows a user to generate an intensity profile by defining a line of interest. 
+The following MATLAB script allows a user to generate an intensity profile by defining a line of interest.
+
+![Example Output](example-output-line.PNG)
 
 ### Summary
 
