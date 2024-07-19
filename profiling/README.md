@@ -2,7 +2,7 @@
 
 The following MATLAB script allows a user to generate an intensity profile by defining a line of interest.
 
-![Example Output](example-output-line.PNG)
+![Example Output](example-output-line.png)
 
 ### Summary
 
