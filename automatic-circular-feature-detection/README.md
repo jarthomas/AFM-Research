@@ -1,8 +1,6 @@
-## Circular Structures Analysis Using MATLAB
+# Circular Structures Analysis
 
-The following MATLAB script processes a TIFF image to calculate intensities within detected circular structures, while a PNG image is used for visual representation. The script performs circle detection, intensity calculation, and visualization.
-
-![Example Output](circ_example_output.PNG)
+This MATLAB script performs a series of steps to analyze circular structures in an image. It utilizes both TIFF and PNG formats, with intensity calculations based on the TIFF image and circle detection via the PNG image.
 
 ### Summary
 
@@ -49,9 +47,10 @@ The following MATLAB script processes a TIFF image to calculate intensities with
 
     - The physical size of the image is 3.00 µm x 3.00 µm, and the resolution is 512px x 512px.
     - Calibration factor:
-    $$
+    
+    ```math
     \text{um\_per\_pixel} = \frac{3.00 \, \mu m}{512 \, \text{pixels}} = 0.00586 \, \mu m/\text{pixel}
-    $$
+    ```
 
 5. **Perform Hough Transform for circle detection in the PNG image**
 
@@ -113,7 +112,7 @@ The following MATLAB script processes a TIFF image to calculate intensities with
     end
     ```
 
-    - The intensity calibration factor is $nA\_per\_intensity = 0.0140$ nA/intensity.
+    - The intensity calibration factor is `nA_per_intensity = 0.0140` nA/intensity.
 
 10. **Normalize the intensity data**
 
