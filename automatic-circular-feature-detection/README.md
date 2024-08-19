@@ -54,6 +54,7 @@ This MATLAB script performs a series of steps to analyze circular structures in 
     \text{um\_per\_pixel} = \frac{3.00 \, \mu m}{512 \, \text{pixels}} = 0.00586 \, \mu m/\text{pixel}
     ```
   ![Example Output](gwid-size-ver.png)
+  
     I verified the size of my TIFF using the "Save As" function in Gwyddion.
 
 5. **Perform Hough Transform for circle detection in the PNG image**
