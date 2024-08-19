@@ -48,7 +48,8 @@ This MATLAB script performs a series of steps to analyze circular structures in 
     ```
 
     - The physical size of the image is 3.00 µm x 3.00 µm, and the resolution is 512px x 512px. I verified the size of my TIFF using the "Save As" function in Gwyddion.
-  ![Example Output](gwid-size-ver.PNG)
+    - 
+  ![Example Output](gwid-size-ver.png)
 
     - Calibration factor:
     
