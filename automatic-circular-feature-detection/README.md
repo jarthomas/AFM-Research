@@ -47,15 +47,15 @@ This MATLAB script performs a series of steps to analyze circular structures in 
     fprintf('Calibration: %.5f µm/pixel\n', um_per_pixel);
     ```
 
-    - The physical size of the image is 3.00 µm x 3.00 µm, and the resolution is 512px x 512px. I verified the size of my TIFF using the "Save As" function in Gwyddion.
-    - 
-  ![Example Output](gwid-size-ver.png)
-
-    - Calibration factor:
+    - The physical size of the image is 3.00 µm x 3.00 µm, and the resolution is 512px x 512px.
+       - Calibration factor:
     
     ```math
     \text{um\_per\_pixel} = \frac{3.00 \, \mu m}{512 \, \text{pixels}} = 0.00586 \, \mu m/\text{pixel}
     ```
+    - I verified the size of my TIFF using the "Save As" function in Gwyddion.
+    - 
+  ![Example Output](gwid-size-ver.png)
 
 5. **Perform Hough Transform for circle detection in the PNG image**
 
