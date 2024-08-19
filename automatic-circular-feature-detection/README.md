@@ -1,4 +1,4 @@
-# Circular Structures Analysis
+# Automatic Cicular Feature Detection
 
 This MATLAB script performs a series of steps to analyze circular structures in an image. It utilizes both TIFF and PNG formats, with intensity calculations based on the TIFF image and circle detection via the PNG image
 
