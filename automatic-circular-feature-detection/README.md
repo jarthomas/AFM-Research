@@ -43,7 +43,7 @@ The following MATLAB script processes a TIFF image to calculate intensities with
     - The calibration factor is calculated as:
 
     \[
-    \text{µm per pixel} = \frac{3.00 \, \mu m}{512 \, \text{pixels}} = 0.00586 \, \mu m/\text{pixel}
+    \text{µm per pixel} = \frac{3.00 \, \mu \text{m}}{512 \, \text{pixels}} = 0.00586 \, \mu \text{m/pixel}
     \]
 
 ### Calibration Calculation
@@ -130,4 +130,3 @@ The box plot shows the variation in intensity across different circles.
     circle_table = cell2table(circle_data, 'VariableNames', {'Circle Index', 'X Coordinate', 'Y Coordinate', 'Mean Intensity (nA)'});
     disp(circle_table);
     ```
-
