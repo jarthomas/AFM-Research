@@ -1,69 +1,170 @@
-# Circular Feature Extraction and Intensity Calculation
+Circular Structures Analysis from TIFF and PNG Images
+This project analyzes circular structures detected in PNG and TIFF images, calculates their intensities, and visualizes the most similar circles based on intensity measurements.
 
+Project Overview
+Input: TIFF image (tri_circ.tiff) for intensity calculations and PNG image (tri.png) for circle detection and representation.
+Output: Circles detected in the image are highlighted, their mean intensity values are calculated, and a table and box plot of the intensity distributions are generated.
+Key Steps
+Image Loading:
 
-## Key Equations and Concepts
+Convert TIFF and PNG images to grayscale.
+Calculate calibration factors for both axes.
+Circle Detection:
 
-### 1. Calibration Factor for X and Y Axes
-The calibration factor is calculated as follows:
+Use the Hough Transform to detect circles in the PNG image.
+Identify and label circles with numbers.
+Intensity Calculation:
 
-$$
-	ext{um\_per\_pixel} = rac{3.00 \, \mu m}{512 \, 	ext{pixels}} = 0.00585 \, \mu m/	ext{pixel}
-$$
+Calculate the mean intensity within each detected circle in the TIFF image.
+Convert the intensity values to nanoamperes (nA).
+Similarity Calculation:
 
-This equation determines the physical size of each pixel in the image.
+Normalize the intensity values and compute pairwise Euclidean distances.
+Identify the three circles with the smallest total pairwise distance.
+Visualization:
 
-### 2. Intensity Calibration Factor
-The conversion factor from pixel intensity values to current values in nanoamperes (nA) is given by:
+Highlight the most similar circles in red and present the intensity distributions using box plots.
+Key Equations
+Calibration Factor Calculation
+The calibration factor for converting pixel distances to micrometers is calculated as:
 
-$$
-	ext{nA\_per\_intensity} = 0.0140
-$$
+Calibration Factor
+=
+Physical Size in µm
+Number of Pixels
+Calibration Factor= 
+Number of Pixels
+Physical Size in µm
+​
+ 
+For a 512 px image with a 3.00 µm size:
 
-### 3. Hough Transform for Circle Detection
-The Hough Transform is used to detect circular structures:
+um_per_pixel
+=
+3.00
+ 
+µm
+512
+ 
+pixels
+=
+0.00586
+ 
+µm/pixel
+um_per_pixel= 
+512pixels
+3.00µm
+​
+ =0.00586µm/pixel
+Intensity Conversion
+The intensity values from the TIFF image are converted to nanoamperes (nA) using the calibration factor:
 
-$$
-egin{align*}
-[	ext{centers}, 	ext{radii}] &= 	ext{imfindcircles}(I_{	ext{png}}, [8, 50], 	ext{'Sensitivity'}, 0.9)
-\end{align*}
-$$
+𝐼
+nA
+=
+𝐼
+intensity
+×
+nA_per_intensity
+I 
+nA
+​
+ =I 
+intensity
+​
+ ×nA_per_intensity
+Normalization
+To normalize the intensity values, we use:
 
-### 4. Mean Intensity Calculation within Detected Circles
-For each detected circle, the mean intensity is calculated as follows:
+𝐼
+norm
+=
+𝐼
+−
+min
+⁡
+(
+𝐼
+)
+max
+⁡
+(
+𝐼
+)
+−
+min
+⁡
+(
+𝐼
+)
+I 
+norm
+​
+ = 
+max(I)−min(I)
+I−min(I)
+​
+ 
+where 
+𝐼
+I represents the intensity values.
 
-$$
-egin{align*}
-	ext{circle\_intensities} &= I_{	ext{tiff}}(	ext{mask}) \
-	ext{circle\_intensities\_nA} &= 	ext{circle\_intensities} 	imes 	ext{nA\_per\_intensity} \
-	ext{intensity\_values}(i) &= 	ext{mean}(	ext{circle\_intensities\_nA})
-\end{align*}
-$$
+Pairwise Euclidean Distance
+The pairwise Euclidean distances between normalized intensity values are calculated as:
 
-### 5. Intensity Normalization
-The intensity values are normalized to the range [0, 1]:
+𝑑
+(
+𝑖
+,
+𝑗
+)
+=
+(
+𝐼
+norm
+,
+𝑖
+−
+𝐼
+norm
+,
+𝑗
+)
+2
+d(i,j)= 
+(I 
+norm,i
+​
+ −I 
+norm,j
+​
+ ) 
+2
+ 
+​
+ 
+Similarity Calculation
+The circles with the smallest total pairwise distance are identified as:
 
-$$
-	ext{intensity\_values\_norm} = 	ext{normalize}(	ext{intensity\_values})
-$$
-
-### 6. Pairwise Euclidean Distance Calculation
-The pairwise Euclidean distances are calculated using:
-
-$$
-egin{align*}
-	ext{features} &= 	ext{intensity\_values\_norm} \
-	ext{distances} &= 	ext{pdist}(	ext{features}) \
-	ext{dist\_matrix} &= 	ext{squareform}(	ext{distances})
-\end{align*}
-$$
-
-### 7. Identification of the Most Similar Circles
-The most similar circles are identified by:
-
-$$
-egin{align*}
-	ext{total\_distances} &= \sum(	ext{dist\_matrix}) \
-[\sim, 	ext{most\_similar\_idx}] &= 	ext{mink}(	ext{total\_distances}, 3)
-\end{align*}
-$$
-
+Total Distance
+=
+∑
+𝑗
+=
+1
+𝑛
+𝑑
+(
+𝑖
+,
+𝑗
+)
+Total Distance= 
+j=1
+∑
+n
+​
+ d(i,j)
+Visualization
+Detected Circles: Circles detected in the PNG image are highlighted in green.
+Intensity Distribution: The box plot shows the distribution of intensity values within each detected circle.
