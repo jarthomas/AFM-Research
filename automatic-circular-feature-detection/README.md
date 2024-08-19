@@ -1,6 +1,5 @@
 # Circular Feature Extraction and Intensity Calculation
 
-This repository contains MATLAB code for extracting circular features and calculating their intensities from a given image. The key mathematical concepts and equations used in the code are detailed below.
 
 ## Key Equations and Concepts
 
