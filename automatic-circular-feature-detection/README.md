@@ -2,7 +2,7 @@
 
 The following MATLAB script processes a TIFF image to calculate intensities within detected circular structures, while a PNG image is used for visual representation. The script performs circle detection, intensity calculation, and visualization.
 
-![Example Output](exampleOutput.png)
+![Example Output](circ_example_output.PNG)
 
 ### Summary
 
