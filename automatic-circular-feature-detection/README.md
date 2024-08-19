@@ -193,6 +193,7 @@ This MATLAB script performs a series of steps to analyze circular structures in 
     circle_table = cell2table(circle_data, 'VariableNames', {'Circle Index', 'X Coordinate', 'Y Coordinate', 'Mean Intensity (nA)'});
     disp(circle_table);
     ```
+      ![Example Output](ex-output.png)
 
     - The circle data, including circle index, coordinates, and mean intensity, is displayed in a table format.
 
