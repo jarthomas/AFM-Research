@@ -196,12 +196,3 @@ This MATLAB script performs a series of steps to analyze circular structures in 
       ![Example Output](ex-output.png)
 
     - The circle data, including circle index, coordinates, and mean intensity, is displayed in a table format.
-
-### Additional Function
-
-```matlab
-% Function to create a circular mask
-function mask = createCircularMask(imageSize, center, radius)
-    [X, Y] = meshgrid(1:imageSize(2), 1:imageSize(1));
-    mask = (X - center(1)).^2 + (Y - center(2)).^2 <= radius^2;
-end
