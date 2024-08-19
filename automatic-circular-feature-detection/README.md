@@ -113,6 +113,12 @@ This MATLAB script performs a series of steps to analyze circular structures in 
     ```
 
     - The intensity calibration factor is `nA_per_intensity = 0.0140` nA/intensity.
+    
+    - Intensity calibration:
+    
+    ```math
+    \text{circle\_intensities\_nA} = \text{circle\_intensities} \times 0.0140 \, nA
+    ```
 
 10. **Normalize the intensity data**
 
@@ -122,6 +128,12 @@ This MATLAB script performs a series of steps to analyze circular structures in 
     ```
 
     - `normalize(intensity_values)`: Normalizes the intensity values.
+
+    - Normalization:
+    
+    ```math
+    \text{intensity\_values\_norm} = \frac{\text{intensity\_values} - \text{min}}{\text{max} - \text{min}}
+    ```
 
 11. **Calculate pairwise Euclidean distances and find the most similar circles**
 
@@ -133,6 +145,12 @@ This MATLAB script performs a series of steps to analyze circular structures in 
     ```
 
     - The most similar circles are identified based on the smallest pairwise Euclidean distances.
+    
+    - Euclidean distance calculation:
+    
+    ```math
+    d(i,j) = \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}
+    ```
 
 12. **Highlight the most similar circles in red**
 
