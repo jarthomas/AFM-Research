@@ -42,9 +42,9 @@ The following MATLAB script processes a TIFF image to calculate intensities with
 
     - The calibration factor is calculated as:
 
-    \[
+    ```math
     \text{µm per pixel} = \frac{3.00 \, \mu \text{m}}{512 \, \text{pixels}} = 0.00586 \, \mu \text{m/pixel}
-    \]
+    ```
 
 ### Calibration Calculation
 
@@ -83,50 +83,3 @@ The circles detected by the Hough Transform are visualized with green edges.
         mask = createCircularMask(size(I_tiff), centers(i,:), radii(i));
         circle_intensities = I_tiff(mask);
         intensity_values(i) = mean(circle_intensities) * 0.0140;
-    end
-    ```
-
-    - The intensity in nanoamperes (nA) is calculated by multiplying pixel intensity by a calibration factor:
-
-    \[
-    \text{Intensity (nA)} = \text{Pixel Intensity} \times 0.0140
-    \]
-
-7. **Display Most Similar Circles**
-
-    ```matlab
-    % Highlight the three most similar circles
-    distances = pdist(normalize(intensity_values));
-    dist_matrix = squareform(distances);
-    [~, most_similar_idx] = mink(sum(dist_matrix), 3);
-    viscircles(centers(most_similar_idx, :), radii(most_similar_idx), 'EdgeColor', 'r');
-    ```
-
-    - The pairwise distance between normalized intensity values is calculated as:
-
-    \[
-    \text{Distance} = \sqrt{(I_i - I_j)^2}
-    \]
-
-    where \( I_i \) and \( I_j \) are the normalized intensities of circles \( i \) and \( j \).
-
-8. **Plot Intensity Distribution**
-
-    ```matlab
-    % Plot box plots of intensity distributions
-    boxplot(all_intensities, group, 'Labels', arrayfun(@num2str, 1:numCircles, 'UniformOutput', false));
-    ```
-
-    - `boxplot`: Displays the intensity distribution within detected circles.
-
-### Intensity Distribution
-
-The box plot shows the variation in intensity across different circles.
-
-9. **Output Circle Data**
-
-    ```matlab
-    % Display circle data in a table
-    circle_table = cell2table(circle_data, 'VariableNames', {'Circle Index', 'X Coordinate', 'Y Coordinate', 'Mean Intensity (nA)'});
-    disp(circle_table);
-    ```
