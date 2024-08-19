@@ -13,4 +13,4 @@ Convert both images to grayscale if they are in RGB format.
 Calibrate the pixel size based on a known physical size of 3.00 µm across 512 pixels. The calibration factor is calculated as:
 
 ```latex
-\text{µm per pixel} = \frac{3.00 \, \mu m}{512 \, \text{pixels}} = 0.00586 \, \mu m/\text{pixel}
+\text{Intensity (nA)} = \text{Pixel Intensity} \times 0.0140
