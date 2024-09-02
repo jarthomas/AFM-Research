@@ -1,6 +1,6 @@
 # Gwyddion Python Modules
 
-This repository provides Gwyddion Python modules, from basic to advanced, specifically designed for the manipulation and analysis of AFM data.
+This repository provides Gwyddion Python modules, from basic to advanced, specifically designed for the manipulation and analysis of AFM data. Note complications may arise if both Gwydion 32 and 64-bit versions are installed simultaneously on your system. If you intend on setting-up a version of Gwydion for Python scripting, I would recommend configuring the dependenices below in a virtual environment to prevent negative impacts to your 65-bit version.
 
 To get started, you'll need to download and install the following:
 
