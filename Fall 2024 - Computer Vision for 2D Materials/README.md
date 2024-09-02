@@ -4,11 +4,11 @@ This repository provides Gwyddion Python modules, from basic to advanced, specif
 
 To get started, you'll need to download and install the following:
 
-- **Gwyddion (32-bit version)**
-- **Python 2.7**
+- **[Gwyddion (32-bit version)](https://sourceforge.net/projects/gwyddion/files/pygtk-win32/)**
+- **[Python 2.7](https://sourceforge.net/projects/gwyddion/files/pygtk-win32/)**
 
 Additionally, make sure to install these three essential Python packages:
 
-- **PyGTK**
-- **Pycairo**
-- **PyGObject**
+- **[pygtk](https://sourceforge.net/projects/gwyddion/files/pygtk-win32/)**
+- **[pycairo](https://sourceforge.net/projects/gwyddion/files/pygtk-win32/)**
+- **[pygobject](https://sourceforge.net/projects/gwyddion/files/pygtk-win32/)**
