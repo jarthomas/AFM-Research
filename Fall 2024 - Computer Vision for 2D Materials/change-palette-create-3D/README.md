@@ -1,6 +1,6 @@
 # Change Color Palette and Generate a 3D View
 
-![Console Image](console.png)
+![Console Image](palette-3d-view.png)
 
 This Python script automates the process of iterating through data fields in all open containers within the Gwyddion data analysis software. It modifies the color palette of each data field to "Red" and then displays a 3D view of the current container.
 
