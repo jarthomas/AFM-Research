@@ -7,13 +7,12 @@ This Python script automates the process of iterating through data fields in all
 ### Summary
 1. **Iterate Through All Open Containers**
 
-   ```
+```
 for container in gwy.gwy_app_data_browser_get_containers():
     for i in gwy.gwy_app_data_browser_get_data_ids(container):
 gwy.gwy_app_data_browser_get_containers(): Retrieves all currently open containers in the Gwyddion data browser.
 gwy.gwy_app_data_browser_get_data_ids(container): Retrieves the data field IDs for each container.
 ```
-
 
   ```python
 Copy code
