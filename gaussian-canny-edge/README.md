@@ -1,4 +1,4 @@
-## Gradient Magnitude Canny Edge Detection Using MATLAB
+# Gradient Magnitude Canny Edge Detection Using MATLAB
 
 The following MATLAB script reads an image, converts it to grayscale, computes the gradient magnitudes using Gaussian x & y derivatives, and applies Canny edge detection with different threshold levels.
 
