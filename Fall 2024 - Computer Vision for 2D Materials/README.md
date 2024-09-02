@@ -2,7 +2,7 @@
 
 This repository contains Gwyddion Python modules, from basic to advanced, specifically designed for the manipulation and analysis of AFM data. Note complications may arise if both Gwydion 32 and 64-bit versions are installed simultaneously on your system. If you intend on setting-up a version of Gwydion for Python scripting, I would recommend configuring the dependenices below in a virtual environment to prevent negative impacts to your 65-bit version.
 
-![Console Image](console.png)
+![Console Image](AFM-Research/Fall%202024%20-%20Computer%20Vision%20for%202D%20Materials/images/console.png)
 
 To get started, you'll need to download and install the following:
 
