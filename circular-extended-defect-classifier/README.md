@@ -1,6 +1,6 @@
 # Cicular and Extended Defect Classifier
 
-![Example Output](Heatmap-3d-output.png)
+![Example Output](circular-extended-defect-detection.png)
 
 This Python script is designed to analyze and segment defects in Atomic Force Microscopy (AFM) images. It processes an AFM TIFF image to identify circular and extended defects using edge detection, morphology, and region-based segmentation. The resulting defects are visually highlighted in a color-coded image overlay.
 
