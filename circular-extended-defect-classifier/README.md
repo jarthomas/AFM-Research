@@ -1,4 +1,4 @@
-# Cicular and Extended Defect Classifier
+# Circular and Extended Defect Classifier
 
 ![Example Output](circular-extended-defect-detection.png)
 
