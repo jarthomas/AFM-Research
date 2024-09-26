@@ -2,7 +2,8 @@
 
 This Python script provides a comprehensive pipeline for analyzing Atomic Force Microscopy (AFM) images. It allows users to load, preprocess, segment, and visualize AFM images using watershed segmentation and various image processing techniques. The script includes interactive tools for region selection, 3D visualization, and export functionality to save processed images.
 
-![Example Output](Heatmap-3d-output.png)
+![Example Output](afm_3d_image.png)
+(Example output from AP-CVD MoS2)
 
 ### Dependencies:
 
@@ -28,8 +29,12 @@ This Python script provides a comprehensive pipeline for analyzing Atomic Force 
 
 ## Step 1 - Define an Area of Interest on Your Sample
 
-![Example Output](sample1.png)
+![Example Output](step1.png)
 
-## Step 2 - View 
+## Step 2 - View Results
 
-![Example Output](sample1.png)
+![Example Output](step2.png)
+
+## Step 3 - Save Results as .PNGs
+![Example Output](step3.png)
+![Example Output](step4.png)
