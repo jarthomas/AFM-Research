@@ -12,7 +12,7 @@ This Python script loads an Atomic Force Microscopy (AFM) TIFF image, generates 
 * Tifffile
 * Tkinter (for file dialogs)
 
-Script Features
+### Script Features
 For each AFM TIFF image, the script performs the following operations:
 
 Load and display the AFM data:
