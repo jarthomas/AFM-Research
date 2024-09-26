@@ -39,5 +39,5 @@ This Python script provides a comprehensive pipeline for analyzing Atomic Force 
 ## Step 3 - Save Results as .PNGs
 ![Example Output](step3.png)
 
-## Step 3 - Confirm PNGs Saved to new Folder
+## Step 4 - Confirm PNGs Saved to new Folder
 ![Example Output](step4.png)
