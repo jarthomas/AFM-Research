@@ -4,6 +4,8 @@ This Python script provides a comprehensive pipeline for analyzing Atomic Force 
 
 ![Example output from AP-CVD MoS2](afm_3d_image.png)
 
+(Example output from AP-CVD MoS2)
+
 ### Dependencies:
 
 * numpy: For numerical operations.
