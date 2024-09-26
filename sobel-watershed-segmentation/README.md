@@ -1,4 +1,4 @@
-# Sobel and Watershed Therholding for Segmented 3D Visualizations of AFM Data
+# Sobel and Watershed Thresholding for Segmented 3D Visualizations of AFM Data
 
 This Python script provides a comprehensive pipeline for analyzing Atomic Force Microscopy (AFM) images. It allows users to load, preprocess, segment, and visualize AFM images using watershed segmentation and various image processing techniques. The script includes interactive tools for region selection, 3D visualization, and export functionality to save processed images.
 
