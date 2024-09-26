@@ -15,16 +15,9 @@ This Python script loads an Atomic Force Microscopy (AFM) TIFF image, generates 
 ### Script Features
 For each AFM TIFF image, the script performs the following operations:
 
-Load and display the AFM data:
-
-Reads the AFM image from a .tiff file.
-
-2D and 3D visualization:
-
-Displays a 2D heatmap to represent the surface height.
-
-Renders a 3D surface plot to visualize the surface morphology of the AFM data.
-Export to Excel:
-
-Converts the AFM TIFF image data into a Pandas DataFrame.
-Exports the data to an Excel file for easy manipulation and analysis.
+* Load and display the AFM data.
+* Reads the AFM image from a .tiff file.
+* 2D and 3D visualization.
+* Displays a 2D heatmap to represent the surface height.
+* Renders a 3D surface plot to visualize the surface morphology of the AFM data.
+* Exports the data to an Excel file for easy manipulation and analysis.
