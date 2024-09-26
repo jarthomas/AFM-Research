@@ -40,4 +40,4 @@ This Python script provides a comprehensive pipeline for analyzing Atomic Force 
 ![Example Output](step3.png)
 
 ## Step 4 - Confirm PNGs Saved to new Folder
-![Example Output](step4.png)
+![Example Output](step4.PNG)
