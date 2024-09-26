@@ -2,7 +2,7 @@
 
 This Python script loads an Atomic Force Microscopy (AFM) TIFF image, generates both 2D and 3D visual representations, and exports the data into an Excel file for further analysis. It provides an easy-to-use interface for file selection via a file dialog and offers detailed visualizations of AFM data.
 
-![Example Output](.png)
+![Example Output](Heatmap-3d-output.png)
 
 ### Dependencies:
 
