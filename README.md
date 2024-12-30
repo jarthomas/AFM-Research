@@ -1,2 +1,2 @@
-## Hello! 
-This repository is to document my understanding and research into atomic force microscopy and associated image processing techniques.
+## Summer & Fall 2025 Research at Arizona State University's Nanoelectronics Metrology & Failure Analysis Lab 
+During my research at ASU's Nanoelectronics Metrology & Failure Analysis Lab, I worked on applying 2D computer vision techniques to the analysis of atomic force microscopy (AFM) data for 2D materials. My projects included developing image processing methods like 2D-DWT segmentation, circular feature detection, and edge detection to improve the analysis of nanoscale structures and defects. I also contributed to creating tools for generating heatmaps, visualizing 3D structures, and classifying defects, which enhanced the characterization and understanding of 2D materials in nanotechnology applications.
